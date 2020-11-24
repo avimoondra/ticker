@@ -13,6 +13,13 @@ const mapping = {
 
 const urlKeys = Object.keys(mapping);
 
+document.addEventListener("keypress", function (event) {
+  if (event.code === "Enter") {
+    event.preventDefault();
+    changeSymbolButton.click();
+  }
+});
+
 changeSymbolButton.onclick = function (element) {
   let changeSymbolInput = document.getElementById("changeSymbolInput");
   let symbol = changeSymbolInput.value;
